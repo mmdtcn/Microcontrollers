@@ -1,0 +1,36 @@
+;
+; slide03_array_repeat_untill_example.asm
+;
+; Created: 1/5/2021 10:25:40 PM
+; Author : Mohammad S. Shirazi
+;
+
+
+; Replace with your application code
+.include <M328PDEF.inc>
+	.dseg
+	.org	0x100
+count:	
+	.byte 	2
+	.equ	NN = 30
+	.def	lpCnt = r19
+	.def	cnt = r20
+	.cseg
+	.org	0x00
+	ldi	ZL, low(array <<1)
+	ldi	ZH, high (array << 1)
+	ldi	cnt, 0
+	ldi	lpCnt, NN
+	loop:	lpm	r16, Z+
+	andi	r16, 0x1C
+	cpi	r16, 0x1C
+	brne	next
+	inc	cnt
+next:	dec	lpCnt
+	brne	loop
+here:	rjmp	here
+.org	0x200
+array:	.db	0x21,0x2C,0x37,0x42,0x3D,0x59,0x11,0x22,0x97,0x3E
+	.db	0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A
+	.db	0x16,0x17,0x18,0x19,0x1A,0x1B,0x1C,0x1D,0x1E,0x1F
+
