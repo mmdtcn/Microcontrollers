@@ -11,7 +11,7 @@
 
 .ORG 0
 	JMP BEFORE_MAIN
-.ORG 0x02				//Photo Interruptor 1
+.ORG 0x02				//ISR address for the external int 0
 	JMP EXINT0_ISR
 
 
