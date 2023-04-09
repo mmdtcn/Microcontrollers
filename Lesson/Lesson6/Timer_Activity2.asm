@@ -25,7 +25,7 @@ DELAY:
 //TODO: Generate 640 us time delay with timer 0, use CTC mode
 //TODO: Use Appropriate prescaler 
 AGAIN:
-//TODO: Skip next line if OCF0A flag is set inside TIFR0A register
+//TODO: Skip next line if OCF0A flag is set inside TIFR0 register
 RJMP AGAIN
 LDI R20, 0x00
 OUT TCCR0B, R20
