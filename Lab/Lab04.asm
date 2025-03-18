@@ -1,7 +1,8 @@
 ;
-; Lab6b.asm (Seven Segment Counter with Push Button)
+; Lab4.asm (Seven Segment Counter with Push Button)
 ;
 ; Created: 3/1/2023 10:29:57 AM
+; Updated: 3/18/2025 4:56 PM
 ; Author : Mohammad Shirazi
 ;
 
